@@ -3,6 +3,7 @@
 
     var StepMaker = function (container, options) {
 
+        options = options || {};
         container = $(container);
 
         var defaults = {
@@ -69,7 +70,7 @@
                 html.steps.append(stepItem);
             });
 
-            horizontalBarWidth = calcHorizontalBarWidth(containerWidth, options.steps.length);
+            horizontalBarWidth = calcHorizontalBarWidth(containerWidth, steps.length);
             leftPostionBar = calcPosition(horizontalBarWidth);
 
             html.bar.css(buildBarCss(containerWidth, horizontalBarWidth, leftPostionBar));
