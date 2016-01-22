@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title></title>
+  <title>jQuery Plugin - StepMaker</title>
   <link rel="stylesheet" href="src/step-maker.css">
 </head>
 <body>
@@ -10,7 +10,8 @@
   <script src="src/step-maker.jquery.js"></script>
   <script>
     $('.step-container').stepMaker({
-      steps: ['ola', 'sdsd']
+      steps: ['Login', 'Acknowledgements', 'Personal Data', 'Bank Information','Tax Info'],
+      currentStep: 3
     });
   </script>
 </body>
