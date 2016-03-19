@@ -1,0 +1,31 @@
+{
+  "name": "jquery-stepmaker-plugin",
+  "version": "1.0.0",
+  "description": "A simple plugin to help you build steps in a html page",
+  "main": "src/jquery.step-maker.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgercp/jQuery-StepMaker-Plugin.git"
+  },
+  "keywords": [
+    "jquery",
+    "step",
+    "step-maker"
+  ],
+  "author": "Rogério Pimentel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rgercp/jQuery-StepMaker-Plugin/issues"
+  },
+  "homepage": "https://github.com/rgercp/jQuery-StepMaker-Plugin#readme"
+}
