@@ -22,7 +22,7 @@
         var buildBarCss = function (width, horizontalWidth, leftPostion) {
             return {
                 'width': (width - horizontalWidth) + 'px',
-                'left': leftPostion + 'px',
+                'left': leftPostion + 'px'
             };
         };
 
@@ -34,8 +34,16 @@
             html = {
                 stepContainer: $('<div class="step-maker-container">'),
                 steps: $('<div class="step-maker">'),
-                bar: $('<hr>'),
+                bar: $('<hr>')
             };
+
+        var createElement = function (element, html, classes) {
+            var elementCreated = $(element).html(html);
+            if (classes) {
+                elementCreated.addClass(classes);
+            }
+            return elementCreated;
+        };
 
         this.build = function () {
             container = $(container);
@@ -47,19 +55,19 @@
 
             $.each(steps, function (index, step) {
                 // Non zero-based
-                index += 1;
+                index++;
 
-                var stepItem = $('<div class="step">'),
-                    stepNumberLabel = $('<label class="step-number">'),
-                    span = $('<span>').html(index),
-                    stepNameLabel = $('<label>').html(step);
+                var stepItem = createElement('<div>', '', 'step'),
+                    stepNumberLabel = createElement('<label>', '', 'step-number'),
+                    span = createElement('<span>', index),
+                    stepNameLabel = createElement('<label>', step);
 
-                if (currentStep == index)
+                if (currentStep === index)
                     stepItem.addClass("active");
 
                 stepItem.css({
                     'min-width': stepWidth + 'px',
-                    'max-width': stepWidth + 'px',
+                    'max-width': stepWidth + 'px'
                 });
 
                 stepNumberLabel.html(span);
